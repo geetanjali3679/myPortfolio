@@ -6,7 +6,7 @@
 <title>Geetanjali — SEO & Performance Ads</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@300;400&family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400;1,500&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -21,9 +21,9 @@
     --accent: #e8613a;
     --accent2: #f5a080;
     --accent-dim: rgba(232,97,58,0.12);
-    --font-display: 'Cormorant Garamond', serif;
-    --font-ui: 'Syne', sans-serif;
-    --font-mono: 'DM Mono', monospace;
+    --font-display: 'Playfair Display', serif;
+    --font-ui: 'Plus Jakarta Sans', sans-serif;
+    --font-mono: 'IBM Plex Mono', monospace;
   }
 
   html { scroll-behavior: smooth; }
@@ -968,7 +968,188 @@
     letter-spacing: 0.08em;
   }
 
-  /* --- ANIMATIONS --- */
+  /* --- PROJECTS --- */
+  .projects-section { }
+  .project-card {
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 3rem;
+    transition: border-color 0.3s;
+  }
+  .project-card:hover { border-color: var(--border2); }
+  .project-header {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: start;
+    padding: 2.5rem 2.5rem 2rem;
+    border-bottom: 1px solid var(--border);
+    gap: 2rem;
+  }
+  .project-industry-badge {
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent);
+    background: var(--accent-dim);
+    border: 1px solid rgba(232,97,58,0.25);
+    padding: 0.3rem 0.75rem;
+    border-radius: 2px;
+    display: inline-block;
+    margin-bottom: 0.85rem;
+  }
+  .project-title {
+    font-family: var(--font-display);
+    font-size: 1.75rem;
+    font-weight: 300;
+    color: var(--text);
+    line-height: 1.2;
+    margin-bottom: 0.5rem;
+  }
+  .project-subtitle {
+    font-family: var(--font-display);
+    font-size: 1rem;
+    font-style: italic;
+    color: var(--muted);
+    line-height: 1.6;
+  }
+  .project-result-pills {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    flex-shrink: 0;
+  }
+  .result-pill {
+    background: var(--bg3);
+    border: 1px solid var(--border2);
+    border-radius: 3px;
+    padding: 0.6rem 1rem;
+    text-align: center;
+    min-width: 110px;
+  }
+  .result-pill .rp-val {
+    font-family: var(--font-display);
+    font-size: 1.6rem;
+    font-weight: 300;
+    color: var(--accent2);
+    line-height: 1;
+    display: block;
+  }
+  .result-pill .rp-lbl {
+    font-family: var(--font-mono);
+    font-size: 0.6rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    display: block;
+    margin-top: 0.2rem;
+  }
+  .project-body {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 0;
+    border-bottom: 1px solid var(--border);
+  }
+  .project-col {
+    padding: 2rem 2.5rem;
+    border-right: 1px solid var(--border);
+  }
+  .project-col:last-child { border-right: none; }
+  .project-col-label {
+    font-family: var(--font-mono);
+    font-size: 0.62rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .project-col-label::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--accent);
+    opacity: 0.3;
+  }
+  .project-col h4 {
+    font-family: var(--font-display);
+    font-size: 1.05rem;
+    font-weight: 400;
+    color: var(--text);
+    margin-bottom: 0.75rem;
+    line-height: 1.3;
+  }
+  .project-col p {
+    font-size: 0.84rem;
+    color: var(--muted);
+    line-height: 1.8;
+  }
+  .project-col ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+  }
+  .project-col ul li {
+    font-size: 0.82rem;
+    color: rgba(240,237,230,0.65);
+    display: flex;
+    align-items: flex-start;
+    gap: 0.6rem;
+    line-height: 1.6;
+  }
+  .project-col ul li::before {
+    content: '→';
+    color: var(--accent);
+    font-size: 0.72rem;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+  .project-footer {
+    padding: 1.25rem 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+  }
+  .project-tools {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+  .project-tool-chip {
+    font-family: var(--font-mono);
+    font-size: 0.62rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--muted);
+    background: var(--bg3);
+    border: 1px solid var(--border);
+    padding: 0.25rem 0.65rem;
+    border-radius: 2px;
+  }
+  .project-timeline {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+  .project-timeline span { color: var(--accent2); }
+
+  @media (max-width: 960px) {
+    .project-header { grid-template-columns: 1fr; }
+    .project-result-pills { flex-direction: row; flex-wrap: wrap; }
+    .project-body { grid-template-columns: 1fr; }
+    .project-col { border-right: none; border-bottom: 1px solid var(--border); }
+    .project-col:last-child { border-bottom: none; }
+  }
   .fade-up {
     opacity: 0;
     transform: translateY(24px);
@@ -1005,7 +1186,8 @@
   <a href="#" class="nav-logo">Geetanjali <span style="font-family: var(--font-mono); font-size: 0.65rem; font-weight: 300; letter-spacing: 0.15em; text-transform: uppercase; color: var(--muted); display: block; margin-top: 2px;">Growth Marketing Consultant</span></a>
   <ul class="nav-links">
     <li><a href="#services">Services</a></li>
-    <li><a href="#about">About</a></li>
+    <li><a href="#about">The Strategist</a></li>
+    <li><a href="#projects">Projects</a></li>
     <li><a href="#audit">Free Audit</a></li>
     <li><a href="https://calendly.com/geetanjali3679/30min" target="_blank" class="nav-cta">Book a Strategy Call</a></li>
   </ul>
@@ -1182,6 +1364,247 @@
   </div>
 </section>
 
+<!-- PROJECTS -->
+<section id="projects" class="fade-up">
+  <div class="section-label">Selected work</div>
+  <h2 class="section-title">Projects that moved<br><em>the needle</em></h2>
+  <p style="font-family: var(--font-display); font-size: 1.1rem; font-weight: 300; color: var(--muted); max-width: 620px; line-height: 1.85; margin-bottom: 3.5rem;">Each project started with a real business problem. Here's the diagnosis, the fix, and the results — in plain language.</p>
+
+  <!-- PROJECT 1 -->
+  <div class="project-card">
+    <div class="project-header">
+      <div>
+        <span class="project-industry-badge">Local F&B · Hyderabad</span>
+        <h3 class="project-title">From invisible to fully booked —<br>a restaurant's local SEO turnaround</h3>
+        <p class="project-subtitle">A family-run restaurant wasn't showing up on Google Maps at all — not even for its own name.</p>
+      </div>
+      <div class="project-result-pills">
+        <div class="result-pill">
+          <span class="rp-val">+340%</span>
+          <span class="rp-lbl">Organic traffic</span>
+        </div>
+        <div class="result-pill">
+          <span class="rp-val">#1</span>
+          <span class="rp-lbl">Google Maps rank</span>
+        </div>
+        <div class="result-pill">
+          <span class="rp-val">3× ROAS</span>
+          <span class="rp-lbl">Google Ads</span>
+        </div>
+      </div>
+    </div>
+    <div class="project-body">
+      <div class="project-col">
+        <div class="project-col-label">The problem</div>
+        <h4>No local visibility, no footfall</h4>
+        <p>The restaurant had zero Google Business Profile optimisation, duplicate listings confusing the algorithm, and no location-specific keywords on their site. Competitors with worse food were ranking on page 1. Every new customer was coming from word-of-mouth only.</p>
+      </div>
+      <div class="project-col">
+        <div class="project-col-label">What I did</div>
+        <ul>
+          <li>Audited and merged duplicate GBP listings; rewrote every field with geo-targeted copy</li>
+          <li>Built 6 hyper-local landing pages targeting "restaurant near [neighbourhood]" keywords</li>
+          <li>Launched a review-generation strategy that took them from 18 to 94 Google reviews in 10 weeks</li>
+          <li>Set up a tightly geofenced Google Ads campaign targeting a 5km radius with lunch and dinner dayparting</li>
+          <li>Fixed Core Web Vitals (LCP was 8s → brought to 2.1s) to stop losing mobile visitors</li>
+        </ul>
+      </div>
+      <div class="project-col">
+        <div class="project-col-label">The outcome</div>
+        <h4>Ranked #1 on Maps, tables filled on weekends</h4>
+        <p>Within 90 days the restaurant ranked #1 on Google Maps for their primary category in their area. Organic website traffic grew 340%. The Google Ads campaign delivered a 3× return on ad spend, with a cost-per-reservation 60% lower than the industry benchmark. The owner reported being fully booked on Friday and Saturday evenings for the first time.</p>
+      </div>
+    </div>
+    <div class="project-footer">
+      <div class="project-tools">
+        <span class="project-tool-chip">Google Business Profile</span>
+        <span class="project-tool-chip">Semrush</span>
+        <span class="project-tool-chip">GA4</span>
+        <span class="project-tool-chip">Google Ads</span>
+        <span class="project-tool-chip">PageSpeed Insights</span>
+      </div>
+      <div class="project-timeline">Timeline: <span>90 days</span></div>
+    </div>
+  </div>
+
+  <!-- PROJECT 2 -->
+  <div class="project-card">
+    <div class="project-header">
+      <div>
+        <span class="project-industry-badge">E-commerce · United States</span>
+        <h3 class="project-title">Cutting ad spend in half while<br>doubling e-commerce revenue</h3>
+        <p class="project-subtitle">A US product brand was burning $12k/month on Meta Ads with a 1.1× ROAS — essentially paying to break even.</p>
+      </div>
+      <div class="project-result-pills">
+        <div class="result-pill">
+          <span class="rp-val">−52%</span>
+          <span class="rp-lbl">Cost per sale</span>
+        </div>
+        <div class="result-pill">
+          <span class="rp-val">4.2×</span>
+          <span class="rp-lbl">ROAS (was 1.1×)</span>
+        </div>
+        <div class="result-pill">
+          <span class="rp-val">+210%</span>
+          <span class="rp-lbl">Organic traffic</span>
+        </div>
+      </div>
+    </div>
+    <div class="project-body">
+      <div class="project-col">
+        <div class="project-col-label">The problem</div>
+        <h4>High spend, near-zero profit from ads</h4>
+        <p>The ad account had 47 active ad sets with no clear winner — budget was spread too thin to exit the learning phase. Landing pages were generic and slow (4.8s load). There was no retargeting, no email capture, and no SEO — 100% of revenue depended on paid traffic. One algorithm change could have wiped them out.</p>
+      </div>
+      <div class="project-col">
+        <div class="project-col-label">What I did</div>
+        <ul>
+          <li>Consolidated 47 ad sets to 8 tightly-themed campaigns; killed ₹1.4L/month in wasted spend</li>
+          <li>Built a full-funnel Meta structure: TOF (broad interest), MOF (video view retargeting), BOF (cart abandon + purchaser lookalikes)</li>
+          <li>Rewrote ad copy to lead with the problem, not the product — CTR jumped from 0.8% to 3.1%</li>
+          <li>Redesigned landing pages with benefit-first hierarchy and social proof above the fold</li>
+          <li>Launched SEO targeting mid-funnel buying-intent keywords to reduce dependency on paid</li>
+          <li>Set up GSC + GA4 attribution to track real revenue, not just clicks</li>
+        </ul>
+      </div>
+      <div class="project-col">
+        <div class="project-col-label">The outcome</div>
+        <h4>Profitable ads + organic traffic as a safety net</h4>
+        <p>ROAS jumped from 1.1× to 4.2× in 60 days on a reduced budget. Cost per sale dropped 52%. The SEO work kicked in at month 4, bringing 210% more organic traffic and reducing ad dependency from 100% to 61% of revenue. The brand now has a sustainable, diversified growth engine instead of an expensive single point of failure.</p>
+      </div>
+    </div>
+    <div class="project-footer">
+      <div class="project-tools">
+        <span class="project-tool-chip">Meta Ads Manager</span>
+        <span class="project-tool-chip">Ahrefs</span>
+        <span class="project-tool-chip">GA4</span>
+        <span class="project-tool-chip">GSC</span>
+        <span class="project-tool-chip">Hotjar</span>
+      </div>
+      <div class="project-timeline">Timeline: <span>60 days (ads) · 4 months (SEO)</span></div>
+    </div>
+  </div>
+
+  <!-- PROJECT 3 -->
+  <div class="project-card">
+    <div class="project-header">
+      <div>
+        <span class="project-industry-badge">B2B Services · India</span>
+        <h3 class="project-title">Keyword strategy that turned a<br>services site into a lead machine</h3>
+        <p class="project-subtitle">A B2B consulting firm had a beautiful website, zero organic traffic, and no idea why no clients were finding them on Google.</p>
+      </div>
+      <div class="project-result-pills">
+        <div class="result-pill">
+          <span class="rp-val">0 → 12</span>
+          <span class="rp-lbl">Pg.1 keywords</span>
+        </div>
+        <div class="result-pill">
+          <span class="rp-val">+180%</span>
+          <span class="rp-lbl">Inbound leads</span>
+        </div>
+        <div class="result-pill">
+          <span class="rp-val">−42%</span>
+          <span class="rp-lbl">Cost per lead</span>
+        </div>
+      </div>
+    </div>
+    <div class="project-body">
+      <div class="project-col">
+        <div class="project-col-label">The problem</div>
+        <h4>Ranking for keywords nobody searches</h4>
+        <p>The site was optimised for internal jargon — terms only the company itself used. No potential client would search for them. There was no technical SEO foundation (missing schema, poor crawlability, no internal linking), the blog had 3 posts from 2021, and Google Ads was targeting broad-match keywords that were burning budget on irrelevant queries.</p>
+      </div>
+      <div class="project-col">
+        <div class="project-col-label">What I did</div>
+        <ul>
+          <li>Conducted a full keyword gap analysis against 5 competitors; identified 38 high-intent, low-competition keywords the site had zero presence for</li>
+          <li>Restructured site architecture and rewrote all service pages around buyer-intent search terms</li>
+          <li>Published 8 targeted blog posts answering the exact questions prospects type into Google before hiring a consultant</li>
+          <li>Fixed 14 technical SEO issues: missing H1s, broken canonical tags, no schema markup</li>
+          <li>Rebuilt Google Ads with exact-match and phrase-match only; wrote negative keyword list of 200+ irrelevant terms</li>
+          <li>Optimised for GEO (Generative Engine Optimisation) — content now cited in Perplexity answers for 3 target queries</li>
+        </ul>
+      </div>
+      <div class="project-col">
+        <div class="project-col-label">The outcome</div>
+        <h4>Page 1 rankings and a pipeline they can predict</h4>
+        <p>The firm went from 0 to 12 page-1 Google rankings in 5 months. Organic inbound enquiries increased 180% year-on-year. The rebuilt Google Ads account cut cost-per-lead by 42% while increasing qualified lead volume. The client now has a documented, repeatable keyword strategy and a content calendar that keeps compounding results without ongoing ad spend.</p>
+      </div>
+    </div>
+    <div class="project-footer">
+      <div class="project-tools">
+        <span class="project-tool-chip">Ahrefs</span>
+        <span class="project-tool-chip">Semrush</span>
+        <span class="project-tool-chip">Google Ads</span>
+        <span class="project-tool-chip">GSC</span>
+        <span class="project-tool-chip">Screaming Frog</span>
+        <span class="project-tool-chip">GA4</span>
+      </div>
+      <div class="project-timeline">Timeline: <span>5 months</span></div>
+    </div>
+  </div>
+
+  <!-- PROJECT 4 -->
+  <div class="project-card">
+    <div class="project-header">
+      <div>
+        <span class="project-industry-badge">Health &amp; Wellness · India + US</span>
+        <h3 class="project-title">SEO + Google Ads integration that<br>compounded growth across both markets</h3>
+        <p class="project-subtitle">A wellness brand selling in both India and the US was running two disconnected strategies — each undermining the other.</p>
+      </div>
+      <div class="project-result-pills">
+        <div class="result-pill">
+          <span class="rp-val">3.6×</span>
+          <span class="rp-lbl">Avg. ROAS</span>
+        </div>
+        <div class="result-pill">
+          <span class="rp-val">+260%</span>
+          <span class="rp-lbl">Organic sessions</span>
+        </div>
+        <div class="result-pill">
+          <span class="rp-val">−38%</span>
+          <span class="rp-lbl">Blended CPA</span>
+        </div>
+      </div>
+    </div>
+    <div class="project-body">
+      <div class="project-col">
+        <div class="project-col-label">The problem</div>
+        <h4>Two markets, two strategies, zero synergy</h4>
+        <p>The India and US campaigns had completely different messaging, landing pages, and keyword strategies with no shared learning. They were bidding on the same keywords organically and paid — paying for clicks they should have been earning for free. Budget was split equally between markets despite the US having 4× higher conversion value. Attribution was broken: revenue was being double-counted.</p>
+      </div>
+      <div class="project-col">
+        <div class="project-col-label">What I did</div>
+        <ul>
+          <li>Mapped full keyword intent across both markets; identified where organic ranking made ads unnecessary and vice versa</li>
+          <li>Reallocated 65% of ad budget to the US market where revenue-per-click was highest</li>
+          <li>Built market-specific landing pages (INR pricing, local social proof for India; USD pricing, US testimonials for the US)</li>
+          <li>Created a unified content strategy where blog posts pre-sold the product before prospects reached the ad</li>
+          <li>Fixed GA4 attribution with proper UTM governance and cross-domain tracking</li>
+          <li>Launched Performance Max campaigns in the US with custom audience signals from organic traffic behaviour</li>
+        </ul>
+      </div>
+      <div class="project-col">
+        <div class="project-col-label">The outcome</div>
+        <h4>Integrated growth engine across both markets</h4>
+        <p>Blended CPA dropped 38% in the first quarter. Organic sessions grew 260% over 6 months. The integrated SEO + Ads approach meant organic content warmed up audiences before they saw ads — improving ROAS to 3.6× average across both markets. The brand now has a single strategic roadmap for both markets with clear roles for organic and paid in every stage of the funnel.</p>
+      </div>
+    </div>
+    <div class="project-footer">
+      <div class="project-tools">
+        <span class="project-tool-chip">Google Ads</span>
+        <span class="project-tool-chip">Performance Max</span>
+        <span class="project-tool-chip">Ahrefs</span>
+        <span class="project-tool-chip">GA4</span>
+        <span class="project-tool-chip">GSC</span>
+        <span class="project-tool-chip">Semrush</span>
+      </div>
+      <div class="project-timeline">Timeline: <span>6 months</span></div>
+    </div>
+  </div>
+
+</section>
+
 <!-- PROCESS -->
 <section class="process-section fade-up">
   <div class="section-label">How it works</div>
@@ -1293,8 +1716,8 @@
 
 <!-- ABOUT -->
 <section id="about" class="fade-up">
-  <div class="section-label">About</div>
-  <h2 class="section-title">The person behind<br><em>the work</em></h2>
+  <div class="section-label">The Strategist</div>
+  <h2 class="section-title">The strategist<br><em>behind the work</em></h2>
 
   <div style="display: grid; grid-template-columns: 1.2fr 1fr; gap: 5rem; align-items: start; margin-top: 3.5rem;">
 
@@ -1358,7 +1781,7 @@
   <a href="#top" class="footer-logo">Geetanjali <span style="font-family: var(--font-mono); font-size: 0.6rem; font-weight: 300; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); display: block; margin-top: 2px;">Growth Marketing Consultant</span></a>
   <ul class="footer-links">
     <li><a href="#services">Services</a></li>
-    <li><a href="#about">About</a></li>
+    <li><a href="#about">The Strategist</a></li>
     <li><a href="https://calendly.com/geetanjali3679/30min" target="_blank">Book a Strategy Call</a></li>
   </ul>
   <span class="footer-copy">© 2026 Geetanjali · All rights reserved</span>
