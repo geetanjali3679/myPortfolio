@@ -1410,32 +1410,20 @@
       </ul>
     </div>
     <div class="audit-right">
-      <form class="audit-form" onsubmit="return false;">
-        <div class="form-group">
-          <label>Your website URL</label>
-          <input type="url" placeholder="https://yourwebsite.com" />
-        </div>
-        <div class="form-group">
-          <label>Your name</label>
-          <input type="text" placeholder="First name" />
-        </div>
-        <div class="form-group">
-          <label>Your email</label>
-          <input type="email" placeholder="your@email.com" />
-        </div>
-        <div class="form-group">
-          <label>What's your main goal right now?</label>
-          <select>
-            <option value="">Select one</option>
-            <option>More organic traffic / SEO</option>
-            <option>Better return on ad spend</option>
-            <option>Both — full-funnel growth</option>
-            <option>Just want an honest audit first</option>
-          </select>
-        </div>
-        <button type="submit" class="btn-primary" style="width:100%; justify-content:center;">Send My Free Audit Request →</button>
-        <p style="font-size:0.75rem; color:var(--muted); text-align:center; margin-top:0.75rem; font-family:var(--font-mono); letter-spacing:0.06em;">Delivered within 48 hrs · No spam · No commitment</p>
-      </form>
+      <div class="audit-form">
+        <iframe data-tally-src="https://tally.so/embed/44z1zA?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
+          loading="lazy"
+          width="100%"
+          height="420"
+          frameborder="0"
+          marginheight="0"
+          marginwidth="0"
+          title="Free Audit Request"
+          style="min-height: 420px; display: block;"
+        ></iframe>
+        <p style="font-size:0.75rem; color:var(--muted); text-align:center; margin-top:1rem; font-family:var(--font-mono); letter-spacing:0.06em;">Delivered within 48 hrs &middot; No spam &middot; No commitment</p>
+        <script>var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function(e){e.src=e.dataset.tallySrc}))};if("undefined"!=typeof Tally)v();else if(d.querySelector('script[src="'+w+'"]')==null){var s=d.createElement("script");s.src=w;s.onload=v;s.onerror=v;d.body.appendChild(s);}</script>
+      </div>
     </div>
   </div>
 </section>
@@ -1877,6 +1865,7 @@
     entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
   }, { threshold: 0.1 });
   document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
 </script>
 </body>
 </html>
